@@ -1,0 +1,120 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>eFootball Login Demo</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #06152c, #075b49);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.container {
+  background: #ffffff;
+  color: #111;
+  width: 90%;
+  max-width: 380px;
+  padding: 30px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 10px 30px #0008;
+}
+
+h1 {
+  color: #087c55;
+}
+
+input {
+  width: 100%;
+  padding: 14px;
+  margin: 10px 0;
+  border: 1px solid #aaa;
+  border-radius: 8px;
+}
+
+button {
+  width: 100%;
+  padding: 14px;
+  background: #087c55;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background: #055c3e;
+}
+
+#message {
+  color: #087c55;
+  margin-top: 15px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <h1>eFootball</h1>
+
+  <h3>Practice Login</h3>
+
+  <p>Educational demonstration only</p>
+
+  <form id="loginForm">
+
+    <input
+      type="text"
+      placeholder="Demo username"
+      required
+    >
+
+    <input
+      type="password"
+      placeholder="Demo password"
+      required
+    >
+
+    <button type="submit">
+      Test Login
+    </button>
+
+  </form>
+
+  <p id="message"></p>
+
+</div>
+
+<script>
+const form = document.getElementById("loginForm");
+
+form.addEventListener("submit", function(event) {
+
+  event.preventDefault();
+
+  document.getElementById("message").textContent =
+    "Demo successful! No information was saved or sent.";
+
+  form.reset();
+
+});
+</script>
+
+</body>
+</html>
